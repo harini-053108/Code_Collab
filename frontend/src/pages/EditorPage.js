@@ -160,7 +160,7 @@ const EditorPage = () => {
     setOutputVisible(true);
 
     try {
-      const response = await axios.post("/api/execute", { code, language });
+      const response = await axios.post("https://code-collab-z7ux.onrender.com/api/execute", { code, language });
       setOutput({
         text: response.data.output,
         status: response.data.status,
