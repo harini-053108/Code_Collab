@@ -24,6 +24,7 @@ const HomePage = () => {
    * Handle "Create Room" button click
    * Calls the backend API to generate a new Room ID
    */
+  const BACKEND_URL = "https://code-collab-z7ux.onrender.com"; // Render backend URL
   const handleCreateRoom = async () => {
     if (!username.trim()) {
       toast.error("Please enter your name first!");
