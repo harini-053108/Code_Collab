@@ -6,15 +6,13 @@
 
 import { io } from "socket.io-client";
 
-// Connect to our backend server
-// In production, replace with your deployed server URL
-const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || "http://localhost:5000";
+const SOCKET_URL = "https://code-collab-z7ux.onrender.com";
 
 const socket = io(SOCKET_URL, {
-  autoConnect: false,        // Don't connect until we explicitly call socket.connect()
-  reconnectionAttempts: 5,   // Try to reconnect 5 times before giving up
-  reconnectionDelay: 1000,   // Wait 1 second between reconnection attempts
-  transports: ["websocket"], // Prefer WebSocket over long-polling
+  autoConnect: false,
+  reconnectionAttempts: 5,
+  reconnectionDelay: 1000,
+  transports: ["websocket"],
 });
 
 export default socket;

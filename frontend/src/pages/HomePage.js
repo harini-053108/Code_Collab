@@ -33,7 +33,7 @@ const HomePage = () => {
 
     setIsCreating(true);
     try {
-      const response = await axios.post("/api/room/create");
+     const response = await axios.post(`${BACKEND_URL}/api/room/create`);
       const { roomId } = response.data;
 
       // Copy Room ID to clipboard for easy sharing
